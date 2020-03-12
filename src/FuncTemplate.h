@@ -1,3 +1,8 @@
+/*
+ * FuncTemplate.h
+ * This libaray is to illustrate a function template case.
+ */
+
 #include <iostream>
 #include <string>
 
