@@ -26,3 +26,18 @@ class Operation final
 | Function template    | Yes      | https://github.com/pybind/pybind11/issues/199                |
 | Multiple inheritance | Yes      | https://pybind11.readthedocs.io/en/stable/advanced/classes.html#multiple-inheritance |
 
+
+
+### Test cases
+
+Test cases are available in `pybind11_test/test/`directory. Each test case is for testing the corresponding  shared library. Before running those test cases on your computer, please make sure pybind11 is installed successfully, and you should compile the python binding programs in `pybind11_test/src/`directory.
+
+```
+$ cd pybind11_test
+$ mkdir build
+$ cd build
+$ cmake ..
+$ cmake --build .
+```
+
+After running the commands above, all the shared libraries will be ready for testing. Now you can go to `pybind11_test/test/` directory and pick the test case, then just test it!
