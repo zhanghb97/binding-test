@@ -7,14 +7,30 @@ This repository is to test pybind11 in the MLIR python binding project. Three li
 In this section, the requirements of MLIR libraries will be listed.
 
 - Multiple inheritance
+- Class template
+- Template inheritance
 
 ```C++
+// Operation.h
 class Operation final
     : public IRMultiObjectWithUseList<OpOperand>,
       public llvm::ilist_node_with_parent<Operation, Block>,
       private llvm::TrailingObjects<Operation, detail::TrailingOpResult,
                                     BlockOperand, Region,
                                     detail::OperandStorage> {...}
+```
+
+- Function template
+
+```C++
+// Operation.h
+template <typename OpTy> OpTy getParentOfType() {
+  auto *op = this;
+  while ((op = op->getParentOp()))
+    if (auto parentOp = dyn_cast<OpTy>(op))
+      return parentOp;
+  return OpTy();
+}
 ```
 
 
@@ -24,7 +40,9 @@ class Operation final
 | Requirements         | Capacity | Reference                                                    |
 | -------------------- | -------- | ------------------------------------------------------------ |
 | Function template    | Yes      | https://github.com/pybind/pybind11/issues/199                |
+| Class template       | Yes      | https://github.com/pybind/pybind11/issues/199                |
 | Multiple inheritance | Yes      | https://pybind11.readthedocs.io/en/stable/advanced/classes.html#multiple-inheritance |
+| Template inheritance | Yes      | Refit from multiple inheritance                              |
 
 
 
