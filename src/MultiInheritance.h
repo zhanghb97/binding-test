@@ -33,7 +33,7 @@ class PaintCost {
 };
  
 // Derived class with multiple inheritance feature: Rectangle
-class Rectangle: public Shape, public PaintCost {
+class Rectangle final : public Shape, public PaintCost {
   public:
   int getArea() { 
     return (width * height); 
