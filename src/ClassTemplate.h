@@ -1,6 +1,6 @@
 /*
  * ClassTemplate.h
- * This libaray is to illustrate a class template case.
+ * This library is to illustrate a class template case.
  */
 
 #include <iostream>
