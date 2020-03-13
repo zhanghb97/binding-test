@@ -1,6 +1,6 @@
 /*
  * MultiInheritance.h
- * This libaray is to illustrate a multiple inheritance case.
+ * This library is to illustrate a multiple inheritance case.
  */
 
 #include <iostream>
