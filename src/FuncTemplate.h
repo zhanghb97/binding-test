@@ -1,6 +1,6 @@
 /*
  * FuncTemplate.h
- * This libaray is to illustrate a function template case.
+ * This library is to illustrate a function template case.
  */
 
 #include <iostream>
