@@ -7,3 +7,4 @@ find_package(pybind11)
 
 pybind11_add_module(func_template src/FuncTemplate.cpp)
 pybind11_add_module(multi_inheritance src/MultiInheritance.cpp)
+pybind11_add_module(class_template src/ClassTemplate.cpp)
