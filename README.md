@@ -33,6 +33,17 @@ template <typename OpTy> OpTy getParentOfType() {
 }
 ```
 
+- Static property
+
+```c++
+// Operation.h
+static Operation *create(Location location, OperationName name,
+                           ArrayRef<Type> resultTypes, ArrayRef<Value> operands,
+                           ArrayRef<NamedAttribute> attributes,
+                           ArrayRef<Block *> successors, unsigned numRegions,
+                           bool resizableOperandList);
+```
+
 
 
 ### pybind11 capacities
@@ -43,6 +54,7 @@ template <typename OpTy> OpTy getParentOfType() {
 | Class template       | Yes      | https://github.com/pybind/pybind11/issues/199                |
 | Multiple inheritance | Yes      | https://pybind11.readthedocs.io/en/stable/advanced/classes.html#multiple-inheritance |
 | Template inheritance | Yes      | Refit from multiple inheritance                              |
+| Static property      | Yes      | https://pybind11.readthedocs.io/en/stable/advanced/classes.html#static-properties |
 
 
 
