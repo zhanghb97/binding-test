@@ -34,6 +34,7 @@ template <typename OpTy> OpTy getParentOfType() {
 ```
 
 - Static property
+- Return pointer
 
 ```c++
 // Operation.h
@@ -55,6 +56,7 @@ static Operation *create(Location location, OperationName name,
 | Multiple inheritance | Yes      | https://pybind11.readthedocs.io/en/stable/advanced/classes.html#multiple-inheritance |
 | Template inheritance | Yes      | Refit from multiple inheritance                              |
 | Static property      | Yes      | https://pybind11.readthedocs.io/en/stable/advanced/classes.html#static-properties |
+| Return pointer       | Yes      | https://pybind11.readthedocs.io/en/stable/advanced/functions.html#return-value-policies |
 
 
 
