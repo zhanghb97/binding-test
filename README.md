@@ -45,6 +45,27 @@ static Operation *create(Location location, OperationName name,
                            bool resizableOperandList);
 ```
 
+- Enum type
+
+```c++
+// Attributes.h
+enum Kind {
+  AffineMap = Attribute::FIRST_STANDARD_ATTR,
+  Array,
+  Bool,
+  Dictionary,
+  Float,
+  Integer,
+  IntegerSet,
+  Opaque,
+  String,
+  SymbolRef,
+  Type,
+  Unit,
+  ...
+}
+```
+
 
 
 ### pybind11 capacities
@@ -57,6 +78,7 @@ static Operation *create(Location location, OperationName name,
 | Template inheritance | Yes      | Refit from multiple inheritance                              |
 | Static property      | Yes      | https://pybind11.readthedocs.io/en/stable/advanced/classes.html#static-properties |
 | Return pointer       | Yes      | https://pybind11.readthedocs.io/en/stable/advanced/functions.html#return-value-policies |
+| Enum type            | Yes      | https://pybind11.readthedocs.io/en/stable/classes.html#enumerations-and-internal-types |
 
 
 
