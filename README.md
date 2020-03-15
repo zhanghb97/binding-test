@@ -66,6 +66,23 @@ enum Kind {
 }
 ```
 
+- Friend class
+
+```c++
+// Attributes.h
+class AttributeElementIterator
+      : public indexed_accessor_iterator<AttributeElementIterator, const void *,
+                                         Attribute, Attribute, Attribute> {
+  public:
+    ...
+
+  private:
+    friend DenseElementsAttr;
+
+    ...
+  };
+```
+
 
 
 ### pybind11 capacities
@@ -79,6 +96,7 @@ enum Kind {
 | Static property      | Yes      | https://pybind11.readthedocs.io/en/stable/advanced/classes.html#static-properties |
 | Return pointer       | Yes      | https://pybind11.readthedocs.io/en/stable/advanced/functions.html#return-value-policies |
 | Enum type            | Yes      | https://pybind11.readthedocs.io/en/stable/classes.html#enumerations-and-internal-types |
+| Friend class         | Yes      | Not found yet.                                               |
 
 
 
